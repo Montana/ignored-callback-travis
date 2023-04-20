@@ -7,7 +7,9 @@ before_deploy:
 deploy:
   provider: s3
   script: ./deploy.sh
-   edge: true
+  on:
+    branch: callback
+  edge: true
 
 jobs:
   include:
